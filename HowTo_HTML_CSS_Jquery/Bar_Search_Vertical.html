@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.tabcontent {
+  display: none;
+  flex: 65%;
+  padding: 15px;
+  text-align: center;
+  background-color:#ddd;
+}
+
+.tablink {
+  background-color: #555;
+  color: white;
+  float: left;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 17px;
+  width: 25%;
+}
+
+/* Create a column layout with Flexbox */
+.row {
+  display: flex;
+}
+
+/* Left column (menu) */
+.left {
+  flex: 35%;
+  padding: 15px 0;
+}
+
+.left h2 {
+  padding-left: 8px;
+}
+
+/* Style the search box */
+#mySearch {
+  width: 30%;
+  font-size: 18px;
+  padding: 11px;
+  border:1px solid #ddd;
+}
+
+/* Style the navigation menu inside the left column */
+#myMenu {
+  list-style-type: none;
+ /* padding: 0;
+  margin: 0;*/
+  width: 30%;
+}
+
+#myMenu li a {
+  backgrxound-color: #f6f6f6;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px;
+  color: black;
+  display: block
+}
+
+#myMenu li a:hover {
+  background-color: #eee;
+}
+</style>
+</head>
+<body>
+
+<h2>Search Menu</h2>
+<p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+
+
+
+<div class="row">
+  <div class="left" style="background-color:#bbb;">
+    <h2>Menu</h2>
+    <input type="text" id="mySearch" onkeyup="myFunction()" placeholder="Search.." title="Type in a category">
+    <ul class="tablink">
+      <li><a href="#" onclick="openCourse('HTML', this)">HTML</a></li>
+      <li><a href="#" onclick="openCourse('CSS', this)">CSS</a></li>
+      <li><a href="#" onclick="openCourse('JS', this)">JavaScript</a></li>
+      <li><a href="#" onclick="openCourse('PHP', this)">PHP</a></li>
+      <li><a href="#" onclick="openCourse('Python', this)">Python</a></li>
+      <li><a href="#" onclick="openCourse('jQuery', this)">jQuery</a></li>
+      <li><a href="#" onclick="openCourse('SQL', this)">SQL</a></li>
+      <li><a href="#" onclick="openCourse('Bootstrap', this)">Bootstrap</a></li>
+      <li><a href="#" onclick="openCourse('NodeJS', this)">NodeJS</a></li>
+    </ul>
+  </div>  
+
+<div id="HTML" class="tabcontent">
+  <h1>HTML</h1>
+  <p>Learning HTML is Easy...</p>
+  <p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+    <p>Some text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some text..</p>
+</div>
+
+<div id="CSS" class="tabcontent">
+  <h1>CSS</h1>
+  <p>Learning CSS is Easy...</p>
+  <p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+    <p>Some text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some text..</p>
+</div>
+
+<div id="JS" class="tabcontent">
+  <h1>JavaScript</h1>
+  <p>Learning JavaScript is Easy...</p>
+  <p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+    <p>Some text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some text..</p>
+</div>
+
+<div id="PHP" class="tabcontent">
+  <h1>PHP</h1>
+  <p>Learning PHP is Easy...</p>
+  <p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+    <p>Some text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some text..</p>
+</div>
+
+<div id="Python" class="tabcontent">
+  <h1>Python</h1>
+  <p>Learning Python is Easy...</p>
+  <p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+    <p>Some text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some text..</p>
+</div>
+
+<div id="jQuery" class="tabcontent">
+  <h1>jQuery</h1>
+  <p>Learning jQuery is Easy...</p>
+  <p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+    <p>Some text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some text..</p>
+</div>
+
+<div id="SQL" class="tabcontent">
+  <h1>SQL</h1>
+  <p>Learning SQL is Easy...</p>
+  <p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+    <p>Some text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some text..</p>
+</div>
+
+<div id="Bootstrap" class="tabcontent">
+  <h1>Bootstrap</h1>
+  <p>Learning Bootstrap is Easy...</p>
+  <p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+    <p>Some text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some text..</p>
+</div>
+
+<div id="NodeJS" class="tabcontent">
+  <h1>NodeJS</h1>
+  <p>Learning NodeJS is Easy...</p>
+  <p>Start to type for a specific category inside the search bar to "filter" the search options.</p>
+    <p>Some text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some other text..Some text..Some text..Some text..Some text..Some text..Some text..Some text..</p>
+    <p>Some text..</p>
+</div>
+
+</div>
+
+<script>
+function myFunction() {
+  var input, filter, li, a, i;
+  input = document.getElementById("mySearch");
+  filter = input.value.toUpperCase();
+  links = document.getElementsByClassName("tablink");
+  for (i = 0; i < links.length; i++) {
+    if (links.innerHTML.toUpperCase().indexOf(filter) > -1) {
+      links[i].style.display = "";
+    } else {
+      links[i].style.display = "none";
+    }
+  }
+}
+
+
+function openCourse(courseName,elmnt) {
+  var i, tabcontent;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+    tabcontent[i].style.backgroundColor = "#f6f6f6";
+  }
+  document.getElementById(courseName).style.display = "block";
+  // elmnt.style.backgroundColor = color;
+  // tablinks = document.getElementsByTagName("li");
+  // for (i = 0; i < tablinks.length; i++) {
+  //   tablinks[i].style.backgroundColor = "red";
+  // } 
+
+}
+</script>
+
+</body>
+</html>
