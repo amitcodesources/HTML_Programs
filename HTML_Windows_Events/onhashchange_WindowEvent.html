@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onhashchange_WindowEvent</title>
+</head>
+<body onhashchange="myFunction()">
+        <h1 style="text-align: center; color: red; text-decoration: underline">HTML Windows Events</h1>
+        <h3><u>HTML onhashchange Event Attribute</u></h3>
+
+        <p>Click the button to change the anchor part of the current URL to #part5</p>
+
+        <button onclick="changePart()">Try it</button>
+
+        <p id="demo"></p>
+
+        <script>
+            // Using the location.hash property to change the anchor part
+            function changePart() {
+                location.hash = "part5";
+                var x = "The anchor part is now: " + location.hash;
+                document.getElementById("demo").innerHTML = x;
+            }
+
+            // Alert some text if there has been changes to the anchor part
+            function myFunction() {
+                alert("The anchor part has changed!");
+            }
+        </script>
+
+</body>
+</html>

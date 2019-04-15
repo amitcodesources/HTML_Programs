@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Select Element</title>
+    <style type="text/css">
+    	div{
+    		background-color: seagreen;
+    	    padding: 10px;
+    	    color: white;
+    	    margin: 5px;
+    	    width: 300px;
+    </style>
+</head>
+<body>
+
+    <!-- Select and Option -->
+    <div>
+    	<form>
+    		<table>
+    			<tr>
+    				<td>
+    					<label>Select a Language:</label>
+    				</td>
+    				<td>
+                        <select name="proglanguages">
+    					<option>HTML</option>
+    					<option>CSS</option>
+    					<option>JavaScript</option>
+    					<option>JQuery</option>
+    					<option>Bootstrap</option>
+    					<option>Angular JS</option>
+                        </select>
+    				</td>
+    			</tr>
+    		</table>
+    	</form>
+    </div>
+
+    <!-- Select and Option With Size -->
+    <div>
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <label>Select a Language:</label>
+                    </td>
+                    <td>
+                        <select name="proglanguages" size="2">
+                        <option>HTML</option>
+                        <option>CSS</option>
+                        <option>JavaScript</option>
+                        <option>JQuery</option>
+                        <option>Bootstrap</option>
+                        <option>Angular JS</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <!-- Select and Option With Multiple Selection -->
+    <div>
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <label>Select a Language:</label>
+                    </td>
+                    <td>
+                        <select name="proglanguages" size="3" multiple>
+                        <option>HTML</option>
+                        <option>CSS</option>
+                        <option>JavaScript</option>
+                        <option>JQuery</option>
+                        <option>Bootstrap</option>
+                        <option>Angular JS</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <!-- datalist -->
+    <div>
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <label>Select a Language:</label>
+                    </td>
+                    <td>
+                        <input list="languages">
+                        <datalist id="languages">
+                        <option value="HTML">
+                        <option value="CSS">
+                        <option value="JavaScript">
+                        <option value="JQuery">
+                        <option value="Bootstrap">
+                        <option value="Angular JS">
+                        </datalist>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <!-- Textarea -->
+</body>
+</html>

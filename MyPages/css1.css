@@ -1,0 +1,84 @@
+body{
+			margin: 0;
+	}
+/*  --------  Main Header Section  ---------  */
+
+#main-header{
+	background-color:lightgrey;
+	color: black;
+	height: 120px;
+	padding: 10px;
+	text-align: center;
+}
+#main-header h1{
+	font-size: 45px;
+}
+
+/*  --------  Main Nav Section  ---------  */
+
+#main-nav{
+	background-color: maroon;
+	overflow: hidden;
+	margin-bottom: 0px;
+}
+#main-nav ul{
+	list-style-type:none;
+	padding: 0;
+	margin: 0;
+	/*margin-left: 200px;*/
+}
+#main-nav li{
+		float: left;
+}
+#main-nav a{
+	color: white;
+	text-decoration: none;
+	padding: 12px 25px;
+	display: inline-block;
+}
+#main-nav a:hover{
+	background-color: #7b8666;
+}
+#main-nav a.active{
+	background-color: lightgreen;
+}
+
+/*  --------  Latest News Section  ---------  */
+#latest-news{
+    background-color: seagreen;
+    height: 40px;
+    color: black;
+    margin-top: 1px;
+    animation-name: latest-news;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes latest-news {
+    0%, 50%, 100%{
+        background-color: cyan;
+    }
+    25%, 75% {
+        background-color: darkcyan;
+    }
+}
+
+#latest-news p{
+    font-size: 25px;
+    line-height: 40px;
+    margin-top: 0;
+    animation-name: news;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes news {
+    0%{
+        transform: translateX(100%);
+    }
+    100%{
+        transform: translateX(-50%);
+    }
+}

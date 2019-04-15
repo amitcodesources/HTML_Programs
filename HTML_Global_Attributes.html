@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML_Global_Attributes</title>
+    <style>
+        h1.intro {
+            color: blue;
+        }
+
+        p.important {
+            color: green;
+        }
+        div {
+            background: yellow;
+            border: 1px solid black;
+            padding: 10px;
+        }
+    </style>
+    <script>
+        function showDetails(animal) {
+            var animalType = animal.getAttribute("data-animal-type");
+            alert("The " + animal.innerHTML + " is a " + animalType + ".");
+        }
+
+        function displayResult() {
+            document.getElementById("myHeader").innerHTML = "Have a nice day!";
+        }
+    </script>
+</head>
+<body>
+        <h1 style="text-align: center; color: red; text-decoration: underline">HTML Global Attributes</h1>
+        <h3><u>1. HTML accesskey Attribute</u></h3>
+
+        <a href="https://www.w3schools.com/html" accesskey="h">HTML tutorial</a><br>
+        <a href="https://www.w3schools.com/css" accesskey="c">CSS tutorial</a>
+
+        <p>The accesskey attribute specifies a shortcut key to activate/focus an element.</p>
+        <p><strong>Note:</strong> The shortcut is varying in different browsers:</p>
+        <ul>
+            <li>IE, Chrome, Safari, Opera 15+: [ALT] + <em>accesskey</em></li>
+            <li>Opera prior version 15: [SHIFT] [ESC] + <em>accesskey</em></li>
+            <li>Firefox: [ALT] [SHIFT] + <em>accesskey</em></li>
+        </ul>
+
+        <h3><u>2. HTML class Attribute</u></h3>
+
+        <h1 class="intro">Header 1</h1>
+        <p>A paragraph.</p>
+        <p class="important">Note that this is an important paragraph. :)</p>
+
+        <h3><u>3. HTML contenteditable Attribute</u></h3>
+        <p contenteditable="true">This is a paragraph. It is editable. Try to change this text.</p>
+
+        <h3><u>4. HTML contextmenu Attribute</u></h3>
+        <div contextmenu="mymenu">
+            <p>Right-click inside this box to see the context menu!
+
+            <menu type="context" id="mymenu">
+                <menuitem label="Refresh" onclick="window.location.reload();" icon="ico_reload.png"></menuitem>
+                <menu label="Share on...">
+                    <menuitem label="Twitter" icon="ico_twitter.png" onclick="window.open('//twitter.com/intent/tweet?text=' + window.location.href);"></menuitem>
+                    <menuitem label="Facebook" icon="ico_facebook.png" onclick="window.open('//facebook.com/sharer/sharer.php?u=' + window.location.href);"></menuitem>
+                </menu>
+                <menuitem label="Email This Page" onclick="window.location='mailto:?body='+window.location.href;"></menuitem>
+            </menu>
+
+        </div>
+
+        <p>This example currently only works in Firefox!</p>
+
+        <h3><u>5. HTML data-* Attribute</u></h3>
+
+        <h1>Species</h1>
+        <p>Click on a species to see what type it is:</p>
+
+        <ul>
+            <li onclick="showDetails(this)" id="owl" data-animal-type="bird">Owl</li>
+            <li onclick="showDetails(this)" id="salmon" data-animal-type="fish">Salmon</li>
+            <li onclick="showDetails(this)" id="tarantula" data-animal-type="spider">Tarantula</li>
+        </ul>
+
+        <h3><u>6. HTML dir Attribute</u></h3>
+
+        <p dir="rtl">Write this text right-to-left!</p>
+        <p dir="ltr">Write this text left-to-right!</p>
+
+        <h3><u>7. HTML draggable Attribute</u></h3>
+
+        <img src="img/google.jpg" width="40px" height="40px" draggable="true">
+
+        <h3><u>8. HTML hidden Attribute</u></h3>
+
+        <p hidden>This paragraph should be hidden.</p>
+        <p>This is a visible paragraph.</p>
+        <p><b>Note:</b> The hidden attribute is not supported in IE10 or earlier versions.</p>
+
+        <h3><u>9. HTML id Attribute</u></h3>
+
+        <h1 id="myHeader">Hello World!</h1>
+        <button onclick="displayResult()">Change text</button>
+
+        <h3><u>10. HTML lang Attribute</u></h3>
+
+        <p>This is a paragraph.</p>
+        <p lang="fr">Ceci est un paragraphe.</p>
+
+        <h3><u>11. HTML spellcheck Attribute</u></h3>
+
+        First name: <input type="text" name="fname" spellcheck="true">
+        <p><strong>Note:</strong> The spellcheck attribute is not supported in Internet Explorer 9 and earlier versions.</p>
+
+        <h3><u>12. HTML style Attribute</u></h3>
+
+        <h1 style="color:blue;text-align:center">This is a header</h1>
+        <p style="color:green">This is a paragraph.</p>
+
+        <h3><u>13. HTML tabindex Attribute</u></h3>
+
+        <a href="https://www.w3schools.com/" tabindex="2">W3Schools</a><br>
+        <a href="http://www.google.com/" tabindex="1">Google</a><br>
+        <a href="http://www.microsoft.com/" tabindex="3">Microsoft</a>
+
+        <p><b>Note:</b> Try navigating the links by using the "Tab" button on you keyboard.</p>
+
+        <h3><u>14. HTML title Attribute</u></h3>
+
+        <p><abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+        <p title="Free Web tutorials">W3Schools.com</p>
+
+</body>
+</html>

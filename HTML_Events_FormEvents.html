@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Form Events</title>
+</head>
+<body>
+
+    <h1 style="text-align: center; color: red; text-decoration: underline">HTML Form Events</h1>
+
+    <h3><u>1. HTML onblur Event Attribute Demo</u></h3>
+
+    Enter your name: <input type="text" name="uname" id="uname" onblur="myFunction1()">
+    <p>When you leave the input field, a function is triggered which transforms the input text to upper case.</p>
+
+    <h3><u>2. HTML onchange Event Attribute</u></h3>
+
+    <p>Select a new car from the list.</p>
+
+    <select id="mySelect" onchange="myFunction2()">
+        <option value="Audi">Audi
+        <option value="BMW">BMW
+        <option value="Mercedes">Mercedes
+        <option value="Volvo">Volvo
+    </select>
+
+    <p>When you select a new car, a function is triggered which outputs the value of the selected car.</p>
+
+    <p id="demo"></p>
+
+    <h3><u>3. HTML oncontextmenu Event Attribute</u></h3>
+
+    <div style="background-color: yellow;
+    border: 1px solid black;
+    padding: 10px; width: 400px;" oncontextmenu="myFunction3()" contextmenu="mymenu">
+        <p>Right-click inside this box to see the context menu!</p></div>
+
+    <h3><u>4. HTML onfocus Event Attribute</u></h3>
+
+    <p>A function is triggered when one of the input fields get focus. The function changes the background-color of the input field.</p>
+    First name: <input type="text" id="fname" onfocus="myFunction4(this.id)"><br>
+    Last name: <input type="text" id="lname" onfocus="myFunction4(this.id)">
+
+    <h3><u>5. HTML oninput Event Attribute</u></h3>
+
+    <p>Write something in the text field to trigger a function.</p>
+
+    <input type="text" id="myInput" oninput="myFunction5()">
+
+    <p id="demo1"></p>
+
+    <h3><u>6. HTML oninvalid Event Attribute</u></h3>
+
+    <form action="#" method="get">
+        Name: <input type="text" oninvalid="myFunction6()" name="usname" required>
+        <input type="submit" value="Submit">
+    </form>
+
+    <p>If you click submit, without filling out the text field, an alert message will occur.</p>
+
+    <h3><u>7. HTML onreset Event Attribute</u></h3>
+
+    <p>When you reset the form, a function is triggered which alerts some text.</p>
+
+    <form onreset="myFunction7()">
+        Enter name: <input type="text">
+        <input type="reset">
+    </form>
+
+    <h3><u>8. HTML onsearch Event Attribute</u></h3>
+
+    <p>Write something in the search field and press "ENTER".</p>
+
+    <input type="search" id="myInput1" onsearch="myFunction8()">
+
+    <p><strong>Note:</strong> The onsearch event is not supported in Internet Explorer, Firefox or Opera 12 and earlier versions.</p>
+
+    <p id="res"></p>
+
+    <h3><u>9. HTML onselect Event Attribute</u></h3>
+
+    Some text: <input type="text" value="Select me!!" onselect="myFunction9()">
+    <p>The function myFunction() is triggered when some text is selected in the input field. The function shows a message.</p>
+
+    <h3><u>10. HTML onsubmit Event Attribute</u></h3>
+
+    <form action="#" onsubmit="myFunction10()">
+        Enter name: <input type="text" name="name">
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        //HTML onblur Event Attribute Function
+        function myFunction1() {
+            var x = document.getElementById("uname");
+            x.value = x.value.toUpperCase();
+        }
+
+        //HTML onchange Event Attribute Function
+        function myFunction2() {
+            var x = document.getElementById("mySelect").value;
+            document.getElementById("demo").innerHTML = "You selected: " + x;
+        }
+
+        //HTML oncontextmenu Event Attribute Function
+        function myFunction3() {
+            alert("You right-clicked inside the div!");
+        }
+
+        //HTML onfocus Event Attribute Function
+        function myFunction4(x) {
+            document.getElementById(x).style.background = "yellow";
+        }
+
+        //HTML oninput Event Attribute Function
+        function myFunction5() {
+            var x = document.getElementById("myInput").value;
+            document.getElementById("demo1").innerHTML = "You wrote: " + x;
+        }
+
+        //HTML oninvalid Event Attribute Function
+        function myFunction6() {
+            alert('You must fill out the form!');
+        }
+
+        //HTML onreset Event Attribute Function
+        function myFunction7() {
+            alert("The form was reset");
+        }
+
+        //HTML onsearch Event Attribute Function
+        function myFunction8() {
+            var x = document.getElementById("myInput1");
+            document.getElementById("res").innerHTML = "You are searching for: " + x.value;
+        }
+
+        //HTML onselect Event Attribute Function
+        function myFunction9() {
+            alert("You have selected some text!");
+        }
+
+        //HTML onsubmit Event Attribute Function
+        function myFunction10() {
+            alert("The form was submitted");
+        }
+    </script>
+
+</body>
+</html>

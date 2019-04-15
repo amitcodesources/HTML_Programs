@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML 5 Navigation Elements</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style type="text/css">
+    body
+    {
+    	margin: 0;
+    }
+    	ul{
+    		list-style-type: none;
+    		padding: 0;
+    		margin: 0;
+    	}
+    	nav{
+    		background-color: black;
+    		overflow: hidden;
+    	}
+    	ul li{
+    		float: left; /* overthrown background color*/
+    	}
+    	li a{
+    		text-decoration: none;
+    		color: white;
+    		font-size: 25px;
+    		padding: 14px 25px;
+    		display: inline-block; /*mandetory*/ 
+    	}
+    	li a:hover{
+    		background-color: seagreen;
+    		border-radius: 7px; 
+    	}
+    	li a.active{
+    		background-color: green;
+    		border-radius: 7px;
+    	}
+        i{
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+	<nav>
+		<ul>
+			<li>
+				<a href="#" class="active">
+                <i class="fa fa-home"></i>Home
+                </a>
+			</li>
+			<li>
+				<a href="#">
+                <i class="fa fa-id-card"></i>About
+                </a>
+			</li>
+			<li>
+				<a href="#">
+                <i class="fa fa-graduation-cap"></i>Career
+                </a>
+			</li>
+			<li>
+				<a href="#">
+                <i class="fa fa-users"></i>Forum
+                </a>
+			</li>
+			<li>
+				<a href="#">
+                <i class="fa fa-envelope"></i>Contact
+                </a>
+			</li>
+		</ul>
+	</nav>
+</body>
+</html>

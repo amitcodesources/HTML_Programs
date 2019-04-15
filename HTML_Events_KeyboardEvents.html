@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Keyboard Events</title>
+</head>
+<body>
+
+    <h1 style="text-align: center; color: red; text-decoration: underline">HTML Keyboard Events</h1>
+
+    <h2><u>HTML onkeydown Event Attribute</u></h2>
+
+    <p>A function is triggered when the user is pressing a key in the input field.</p>
+    <input type="text" onkeydown="myFunction1()">
+
+    <h2><u>HTML onkeypress Event Attribute</u></h2>
+
+    <p>A function is triggered when the user is pressing a key in the input field.</p>
+    <input type="text" onkeypress="myFunction2()">
+
+    <h2><u>HTML onkeyup Event Attribute</u></h2>
+
+    <p>A function is triggered when the user releases a key in the input field. The function transforms the character to upper case.</p>
+    Enter your name: <input type="text" id="fname" onkeyup="myFunction3()">
+
+
+    <script>
+        //HTML onkeydown Event Attribute Function
+        function myFunction1() {
+            alert("You pressed a key inside the input field");
+        }
+
+        //HTML onkeypress Event Attribute Function
+        function myFunction2() {
+            alert("You pressed a key inside the input field");
+        }
+
+        //HTML onkeyup Event Attribute Function
+        function myFunction3() {
+            var x = document.getElementById("fname");
+            x.value = x.value.toUpperCase();
+        }
+    </script>
+
+
+
+</body>
+</html>

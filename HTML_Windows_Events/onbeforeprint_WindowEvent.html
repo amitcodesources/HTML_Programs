@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onbeforeprint_WindowEvent</title>
+</head>
+<body onbeforeprint="myFunction()">
+    <h1 style="text-align: center; color: red; text-decoration: underline">HTML Windows Events</h1>
+    <h3><u>HTML onbeforeprint Event Attribute</u></h3>
+
+    <h1>Try to print this document</h1>
+    <p><b>Tip:</b> Keyboard shortcuts, such as Ctrl+P sets the page to print.</p>
+    <p><b>Note:</b> The onbeforeprint event is not supported in Safari and Opera.</p>
+
+    <script>
+        function myFunction() {
+            alert("You are about to print this document!");
+        }
+    </script>
+</body>
+</html>

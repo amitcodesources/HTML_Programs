@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Clipboard Events</title>
+</head>
+<body>
+        <h1 id="head" style="text-align: center; color: red; text-decoration: underline">HTML Clipboard Events</h1>
+
+        <h3><u>HTML oncopy Event Attribute</u></h3>
+
+        <input type="text" oncopy="myFunction1()" value="Try to copy this text">
+        <p id="demo1"></p>
+
+        <h3><u>HTML oncut Event Attribute</u></h3>
+
+        <input type="text" oncut="myFunction2()" value="Try to cut this text">
+        <p id="demo2"></p>
+
+        <h3><u>HTML onpaste Event Attribute</u></h3>
+
+        <input type="text" onpaste="myFunction3()" value="Try to paste something in here" size="40">
+        <p id="demo3"></p>
+
+        <script>
+
+            //HTML oncopy Event Attribute Function
+            function myFunction1() {
+                document.getElementById("demo1").innerHTML = "You copied text!"
+            }
+
+            //HTML oncut Event Attribute Function
+            function myFunction2() {
+                document.getElementById("demo2").innerHTML = "You cut text!";
+            }
+
+            //HTML onpaste Event Attribute Function
+            function myFunction3() {
+                document.getElementById("demo3").innerHTML = "You pasted text!";
+            }
+        </script>
+</body>
+</html>

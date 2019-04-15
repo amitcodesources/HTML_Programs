@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Drag Events</title>
+    <style>
+        .droptarget {
+            float: left;
+            width: 100px;
+            height: 35px;
+            margin: 15px;
+            padding: 10px;
+            border: 1px solid #aaaaaa;
+        }
+        #myDIV {
+            border: 1px solid black;
+            width: 200px;
+            height: 100px;
+            overflow: scroll;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 id="head" style="text-align: center; color: red; text-decoration: underline">HTML Drag Events</h1>
+
+    <h3><u>HTML ondrag, ondragstart, ondragend, ondragenter, ondragleave, ondragover, ondrop Event Attribute</u></h3>
+
+
+    <p>Drag the p element back and forth between the two rectangles:</p>
+
+    <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)"
+         ondragleave="dragLeave(event)">
+        <p ondragstart="dragStart(event)" ondrag="dragging(event)" ondragend="dragEnd(event)"
+            draggable="true" id="dragtarget">Drag me!</p>
+    </div>
+
+    <div class="droptarget" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(event)"
+         ondragleave="dragLeave(event)"></div>
+
+    <p style="clear:both;"><strong>Note:</strong> drag events are not supported in Internet Explorer 8 and earlier versions or Safari 5.1 and earlier versions.</p>
+
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+    <h3><u>HTML onscroll Event Attribute</u></h3>
+
+    <p>Try the scrollbar in div.</p>
+
+    <div id="myDIV" onscroll="myscrollunction()">In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
+        <br><br>
+        'Whenever you feel like criticizing anyone,' he told me, just remember that all the people in this world haven't had the advantages that you've had.'</div>
+
+    <p>A function is triggered when you scroll in div. The function sets the color of the text in div to red.</p>
+
+    <script>
+        //HTML ondrag, ondragstart, ondragend, ondragenter, ondragleave, ondragover, ondrop Event Attribute Function
+        
+        function dragStart(event) {
+            event.dataTransfer.setData("Text", event.target.id);
+            document.getElementById("demo1").innerHTML = "The p element is being dragged";
+            document.getElementById("demo2").innerHTML = "Started to drag the p element";
+        }
+
+        function dragging(event) {
+            document.getElementById("head").style.color='Purple';
+        }
+
+        function dragEnd(event) {
+            document.getElementById("demo1").innerHTML = "The p element was dropped";
+            document.getElementById("demo2").innerHTML = "Finished dragging the p element.";
+            document.getElementById("head").style.color='Red';
+        }
+
+        function dragEnter(event) {
+            if ( event.target.className == "droptarget" ) {
+                event.target.style.border = "3px dotted red";
+                document.getElementById("demo3").innerHTML = "Entered the dropzone";
+            }
+        }
+
+        function dragLeave(event) {
+            if ( event.target.className == "droptarget" ) {
+                event.target.style.border = "";
+                document.getElementById("demo3").innerHTML = "Left the dropzone";
+            }
+        }
+
+        function allowDrop(event) {
+            event.preventDefault();
+        }
+
+        function drop(event) {
+            event.preventDefault();
+            var data = event.dataTransfer.getData("Text");
+            event.target.appendChild(document.getElementById(data));
+
+        }
+
+        //HTML onscroll Event Attribute Function
+        function myscrollunction() {
+            document.getElementById("myDIV").style.color = "red";
+        }
+    </script>
+
+
+</body>
+</html>

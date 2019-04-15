@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Form Elements</title>
+    <style type="text/css">
+    	div{
+    		background-color: seagreen;
+    	    padding: 10px;
+    	    color: white;
+    	    margin: 5px;
+    	    width: 300px;
+    </style>
+</head>
+<body>
+
+
+    <!-- input and label -->
+    <div>
+    	<form>
+            <table>
+                <tr>
+                    <td>
+                        <label for="username">User Name</label>
+                    </td>
+                    <td>
+                        <input type="text" id="username">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="pass">Password</label>
+                    </td>
+                    <td>
+                        <input type="password" id="pass">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Submit">
+                    </td>
+                    <td>
+                        <input type="reset" value="Reset">
+                    </td>
+                </tr>
+            </table>
+    	</form>
+    </div>
+   
+    <!-- Table Form-->
+    <div>
+    	<form>
+    		<table>
+    			<tr>
+    				<td>
+    					<label for="username">User Name</label>
+    				</td>
+    				<td>
+    					<input type="text" id="username">
+    				</td>
+    			</tr>
+    			<tr>
+    				<td>
+    					<label for="pass">Password</label>
+    				</td>
+    				<td>
+    					<input type="password" id="pass">
+    				</td>
+    			</tr>
+    			<tr>
+    				<td>
+    					<input type="submit" value="Submit">
+    				</td>
+    				<td>
+    					<input type="reset" value="Reset">
+    				</td>
+    			</tr>
+    		</table>
+    	</form>
+    </div>
+
+    <!-- Select and Option -->
+    <div>
+    	<form>
+    		<table>
+    			<tr>
+    				<td>
+    					<label>Select a Language:</label>
+    				</td>
+    				<td>
+                        <select>
+    					<option>HTML</option>
+    					<option>CSS</option>
+    					<option>JavaScript</option>
+    					<option>JQuery</option>
+    					<option>Bootstrap</option>
+    					<option>Angular JS</option>
+                        </select>
+    				</td>
+    			</tr>
+    		</table>
+    	</form>
+    </div>
+
+    <!-- HTML5 datalist Element -->
+    <div>
+        <form>
+            <table>
+                <tr>
+                    <td>
+                        <label>Select a Language:</label>
+                    </td>
+                    <td>
+                        <input list="languages">
+                        <datalist id="languages">
+                        <option value="HTML">
+                        <option value="CSS">
+                        <option value="JavaScript">
+                        <option value="JQuery">
+                        <option value="Bootstrap">
+                        <option value="Angular JS">
+                        </datalist>
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </div>
+
+    <!-- Textarea -->
+    <div>
+    	<form>
+    		<table>
+    			<tr>
+    				<td>
+    					<label>Your Message : </label>
+    				</td>
+    				<td>
+    					<textarea rows="4" cols="20"></textarea>
+    				</td>
+    			</tr>
+    		</table>
+    	</form>
+    </div>
+
+
+    <!-- button -->
+    <div>
+    		<label>User Name</label>
+            <button type="button" onclick="alert('Hello World!')">Submit</button>
+    </div>
+
+    <!-- HTML5 output Element -->
+    <div>
+        <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            0
+            <input type="range"  id="a" name="a" value="50">
+            100 +
+            <input type="number" id="b" name="b" value="50">
+            =
+            <output name="x" for="a b"></output>
+            <br><br>
+            <input type="submit">
+        </form>
+    </div>
+
+    
+    
+    <!--Grouping Form Data-->
+    <div>
+    <form>
+      <fieldset>
+        <legend>Personal information:</legend>
+        First name:<br>
+        <input type="text" name="firstname" value="Mickey"><br>
+        Last name:<br>
+        <input type="text" name="lastname" value="Mouse"><br><br>
+        <input type="submit" value="Submit">
+      </fieldset>
+    </form>
+    </div>
+
+    
+</body>
+</html>

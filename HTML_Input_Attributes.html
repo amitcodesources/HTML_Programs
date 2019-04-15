@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Input Attributes</title>
+    <style type="text/css">
+    	div{
+    		background-color: green;
+    		color: white;
+    		padding: 10px;
+    		margin: 5px;
+			width: 50%;
+    	}
+    </style>
+</head>
+<body>
+
+    <!-- input attributes value , readonly , size , rows , cols-->
+    <h1>HTML Input Attributes</h1>
+
+    <!-- Value Attribute -->
+    <div>
+    	<form>
+    		<label>User Name</label>
+    		<input type="text" value="AMIT">
+    	</form>
+    </div>
+
+    <!-- ReadOnly Attribute -->
+    <div>
+    	<form>
+    		<label>User Name</label>
+    		<input type="text" readonly="true">
+    	</form>
+    </div>
+
+    <!-- Disable Attribute -->
+    <div>
+    	<form>
+    		<label>User Name</label>
+    		<input type="text" disabled="true">
+    	</form>
+    </div>
+
+    <!-- Size Attribute -->
+    <div>
+    	<form>
+    		<label>User Name</label>
+    		<input type="text" size="10">
+    	</form>
+    </div>
+
+
+    <!-- Maxlength Attribute -->
+    <div>
+        <form>
+            <label>User Name</label>
+            <input type="text" maxlength="10">
+        </form>
+    </div>
+
+    <!-- Rows n Columns Attribute -->
+    <div>
+    	<form>
+    		<label>Enter Your Message</label>
+    		<textarea rows="5" cols="30"></textarea>
+    	</form>
+    </div>
+
+    <!-- HTML 5 Form Attributes required ,
+    no-validate , autofocus , pattern , placeholder -->
+    <h1>HTML5 Input Attributes</h1>
+
+    <!-- Autocomplete Attribute -->
+    <div>
+        <form>
+            <label>UserName</label>
+            <input type="text" autocomplete="off">
+        </form>
+    </div>
+
+    <!-- Autofocus Attribute -->
+    <div>
+        <form>
+            <label>UserName</label>
+            <input type="text" autofocus="true">
+        </form>
+    </div>
+
+    <!-- Required Attribute -->
+    <div>
+    	<form>
+    		<label>UserName</label>
+    		<input type="text" required="true">
+    		<input type="submit" value="Submit">
+    	</form>
+    </div>
+
+    <!-- No-Validate Attribute -->
+    <div>
+    	<form novalidate="true">
+    		<label>Enter Email</label>
+    		<input type="Email">
+    		<input type="submit" value="Submit">
+    	</form>
+    </div>
+
+    
+
+    <!-- Placeholder Attribute -->
+    <div>
+    	<form>
+    		<label>UserName</label>
+    		<input type="text" placeholder="Enter UserName">
+    	</form>
+    </div>
+
+    <!-- Pattern Attribute -->
+    <!-- http://html5pattern.com/ -->
+    <div>
+    	<form>
+    		<label>Twitter UserName</label>
+    		<input type="text" pattern="^[A-Za-z0-9_]{1,15}$">
+    		<input type="submit" value="Submit">
+    	</form>
+    </div>
+</body>
+</html> 

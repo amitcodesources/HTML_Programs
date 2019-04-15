@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML Mouse Events</title>
+    <style>
+        #myDIV {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align: center; color: red; text-decoration: underline">HTML Mouse Events</h1>
+
+    <h3><u>HTML onclick Event Attribute</u></h3>
+
+    <button onclick="myFunction1()">Click me</button>
+    <p id="demo1"></p>
+    <p>A function is triggered when the button is clicked. The function outputs some text in a p element with id="demo".</p>
+
+    <h3><u>HTML ondblclick Event Attribute</u></h3>
+
+    <button ondblclick="myFunction2()">Double-click me</button>
+    <p id="demo2"></p>
+    <p>A function is triggered when the button is double-clicked. The function outputs some text in a p element with id="demo".</p>
+
+    <h3><u>HTML onwheel Event Attribute</u></h3>
+
+    <div id="myDIV" onwheel="myFunction3()">This example demonstrates how to assign an "onwheel" event event to a DIV element. Roll the mouse wheel over me - either up or down!</div>
+    <p>A function is triggered when you roll the mouse wheel over div. The function sets the font-size of div to 35 pixels.</p>
+    <p><strong>Note:</strong> The onwheel event is not supported in Internet Explorer or Safari.</p>
+
+    <h3><u>HTML onmouseup & onmousedown Event Attribute</u></h3>
+
+    <p id="p1" onmousedown="mouseDown()" onmouseup="mouseUp()">
+        Click the text! The mouseDown() function is triggered when the mouse button is pressed down over this paragraph. The function sets the color of the text to red. The mouseUp() function is triggered when the mouse button is released. The mouseUp() function sets the color of the text to green.
+    </p>
+
+    <h3><u>HTML onmousemove & onmouseout Event Attribute</u></h3>
+
+    <img onmousemove="bigImg(this)" onmouseout="normalImg(this)" border="0" src="media/img_w3slogo.gif" alt="W3CLogo" width="32" height="32">
+
+    <p>The function bigImg() is triggered when the user mouse pointer is moved over the image. This function enlarges the image.</p>
+    <p>The function normalImg() is triggered when the mouse pointer is moved out of the image. That function sets the height and width of the image back to normal.</p>
+
+    <h3><u>HTML onmouseover & onmouseout Event Attribute</u></h3>
+    <img onmouseover="largeImg(this)" onmouseout="smallImg(this)" border="0" src="media/img_w3slogo.gif" alt="W3CLogo" width="32" height="32">
+    <p>The function bigImg() is triggered when the user mouse over the image. This function enlarges the image.</p>
+    <p>The function normalImg() is triggered when the mouse pointer is moved out of the image. That function sets the height and width of the image back to normal.</p>
+
+
+    <script>
+        //HTML onclick Event Attribute Function
+        function myFunction1() {
+            document.getElementById("demo1").innerHTML = "Hello World";
+        }
+
+        //HTML ondblclick Event Attribute Function
+        function myFunction2() {
+            document.getElementById("demo2").innerHTML = "Hello World";
+        }
+
+        //HTML onwheel Event Attribute Function
+        function myFunction3() {
+            document.getElementById("myDIV").style.fontSize = "35px";
+        }
+
+        //HTML onmouseup & onmousedown Event Attribute Function
+        function mouseDown() {
+            document.getElementById("p1").style.color = "red";
+        }
+        function mouseUp() {
+            document.getElementById("p1").style.color = "green";
+        }
+
+        //HTML onmousemove & onmouseout Event Attribute Function
+        function bigImg(x) {
+            x.style.height = "64px";
+            x.style.width = "64px";
+        }
+        function normalImg(x) {
+            x.style.height = "32px";
+            x.style.width = "32px";
+        }
+
+        //HTML onmouseover & onmouseout Event Attribute Function
+        function largeImg(x) {
+            x.style.height = "64px";
+            x.style.width = "64px";
+        }
+
+        function smallImg(x) {
+            x.style.height = "32px";
+            x.style.width = "32px";
+        }
+    </script>
+
+</body>
+</html>

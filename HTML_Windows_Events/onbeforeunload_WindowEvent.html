@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onbeforeunload_WindowEvent</title>
+</head>
+<body onbeforeunload="return myFunction()">
+        <h1 style="text-align: center; color: red; text-decoration: underline">HTML Windows Events</h1>
+        <h3><u>HTML onbeforeunload Event Attribute</u></h3>
+
+        <p>Close this window, press F5 or click on the link below to invoke the onbeforeunload event.</p>
+
+        <a href="https://www.w3schools.com">Click here to go to w3schools.com</a>
+
+        <script>
+            function myFunction() {
+                return "Write something clever here...";
+            }
+        </script>
+
+</body>
+</html>

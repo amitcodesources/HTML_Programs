@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>onerror_WindowEvent</title>
+</head>
+<body>
+        <h1 style="text-align: center; color: red; text-decoration: underline">HTML Windows Events</h1>
+        <h3><u>HTML onerror Event Attribute</u></h3>
+
+        <img src="image.gif" onerror="myFunction()">
+
+        <p>A function is triggered if an error occurs when loading the image. The function shows an alert box with a text. In this example we refer to an image that does not exist, therefore the onerror event occurs.</p>
+
+        <script>
+            function myFunction() {
+                alert("The image could not be loaded.");
+            }
+        </script>
+</body>
+</html>
